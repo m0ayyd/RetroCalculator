@@ -81,6 +81,7 @@ class ViewController: UIViewController {
             
             currentOperation = operation
         } else {
+            currentOperation = operation
             leftValStr = runningNumber
             runningNumber = ""
         }
@@ -103,6 +104,14 @@ class ViewController: UIViewController {
         processOperation(operation: currentOperation)
     }
     
+    @IBAction func clearTapped(_ sender: Any) {
+        runningNumber = ""
+        currentOperation = Operation.Empty
+        leftValStr = ""
+        rightValStr = ""
+        result = ""
+        resultLbl.text = "0"
+    }
 
 }
 
